@@ -1,0 +1,17 @@
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    username VARCHAR NOT NULL UNIQUE,
+    email VARCHAR NOT NULL UNIQUE,
+    api_key VARCHAR UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE api_metrics (
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    endpoint VARCHAR NOT NULL,
+    rows_fetched INTEGER DEFAULT 0,
+    response_size INTEGER DEFAULT 0,
+    status_code INTEGER DEFAULT 200,
+    FOREIGN KEY(user_id) REFERENCES users(id)
+);
