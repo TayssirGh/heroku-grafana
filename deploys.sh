@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # === Configuration ===
-APP_NAME="grafana-heroku"
+APP_NAME="grafana-dashboard"
 
 echo "Paste the Heroku PostgreSQL DATABASE_URL:"
 read -r DATABASE_URL
@@ -21,6 +21,7 @@ fi
 
 echo "🛠️ Setting up Heroku app..."
 heroku apps:info -a "$APP_NAME" >/dev/null 2>&1 || heroku create "$APP_NAME"
+heroku stack:set container -a "$APP_NAME"
 
 #this is to set postgresql as backend storage , we should see these tables in the database: *  public.alert
 #                                                                                           *  public.dashboard
@@ -39,6 +40,7 @@ heroku config:set \
   GF_DATABASE_PASSWORD="$DB_PASS" \
   GF_SECURITY_ADMIN_USER=admin \
   GF_SECURITY_ADMIN_PASSWORD=admin \
+  GF_DATABASE_SSL_MODE=require  \
   -a "$APP_NAME"
 
 echo "🐳 Logging in to Heroku Container Registry..."
