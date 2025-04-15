@@ -79,3 +79,5 @@ By using postgresql as a backend for grafana, we'll see these tables under publi
 | user_auth                          |
 | user_auth_token                    |
 | user_auth_token_rotation           |
+| user_external_session              |
+| user_role                          |
