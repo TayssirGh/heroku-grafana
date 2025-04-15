@@ -52,6 +52,7 @@ Le fichier `deploys.sh` contient toutes les instructions nécessaires pour :
 ### Remarque 💡 :
 le script peut ne pas fonctionner sur windows, Dans ce cas, 
 vous pouvez exécuter manuellement les commandes contenues dans deploys.sh, en les adaptant à votre terminal ou Git Bash.
+
 ---
 ## 🐳 À propos du Docker et Heroku
 Heroku propose un stack spécial appelé `container` qui permet de déployer des applications en utilisant directement 
