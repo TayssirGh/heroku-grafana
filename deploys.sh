@@ -19,8 +19,11 @@ else
   exit 1
 fi
 
+# here we are creating an app if there's no existing one
 echo "🛠️ Setting up Heroku app..."
 heroku apps:info -a "$APP_NAME" >/dev/null 2>&1 || heroku create "$APP_NAME"
+
+echo "🔧 Setting Heroku stack to 'container' to enable deployment using a custom Docker image..."
 heroku stack:set container -a "$APP_NAME"
 
 #this is to set postgresql as backend storage , we should see these tables in the database: *  public.alert
@@ -28,11 +31,6 @@ heroku stack:set container -a "$APP_NAME"
 #                                                                                           *  public.user
 echo "🔑 Setting environment variables on Heroku..."
 heroku config:set \
-  GRAFANA_DB_HOST="$DB_HOST" \
-  GRAFANA_DB_PORT="$DB_PORT" \
-  GRAFANA_DB_NAME="$DB_NAME" \
-  GRAFANA_DB_USER="$DB_USER" \
-  GRAFANA_DB_PASSWORD="$DB_PASS" \
   GF_DATABASE_TYPE=postgres \
   GF_DATABASE_HOST="$DB_HOST:$DB_PORT" \
   GF_DATABASE_NAME="$DB_NAME" \
