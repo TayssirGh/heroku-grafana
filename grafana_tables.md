@@ -66,6 +66,7 @@ By using postgresql as a backend for grafana, we'll see these tables under publi
 | seed_assignment                    |
 | server_lock                        |
 | session                            |
+| star                               |
 | short_url                          |
 | signing_key                        |
 | sso_setting                        |
