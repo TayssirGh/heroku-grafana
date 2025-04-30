@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "Parcelle 1 à Saint Nicolas des Bois",
-        "value": 50
+        "value": 3954.0
       },
       "geometry": {
         "type": "Polygon",
@@ -26,7 +26,7 @@
       "type": "Feature",
       "properties": {
         "name": "Parcelle 2 à Saint Nicolas des Bois",
-        "value": 50
+        "value": 6443.0
       },
       "geometry": {
         "type": "Polygon",
