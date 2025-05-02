@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "nom": "Parcelle 1", "surface": 3954 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.0059, 48.4891]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nom": "Parcelle 2", "surface": 6443 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.0063, 48.4885]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nom": "Parcelle 3", "surface": 150 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.0067, 48.4891]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nom": "Parcelle 4", "surface": 53 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.0067, 48.48917]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nom": "Parcelle 5", "surface": 2500 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.0065, 48.4127]
+      }
+    }
+  ]
+}
