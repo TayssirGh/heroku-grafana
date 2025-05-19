@@ -3,6 +3,7 @@ name: Daily Grafana Deployment
 on:
   schedule:
     - cron: '0 3 * * *' # Every day at 3 AM UTC
+  workflow_dispatch:
 
 jobs:
   deploy:
