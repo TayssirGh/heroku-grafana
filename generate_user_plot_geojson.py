@@ -68,10 +68,10 @@ centroid_geojson = {
 
 os.makedirs("geojson", exist_ok=True)
 
-with open("geojson/github_actions_polygon.geojson", "w") as f:
+with open("geojson/github_actions_polygon_cache.geojson", "w") as f:
     json.dump(polygon_geojson, f)
 
-with open("geojson/github_actions_centoids.geojson", "w") as f:
+with open("geojson/github_actions_centoids_cache.geojson", "w") as f:
     json.dump(centroid_geojson, f)
 
 print("✅ GeoJSON files saved to geojson/")
