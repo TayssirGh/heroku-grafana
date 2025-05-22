@@ -8,7 +8,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 if not DATABASE_URL:
     raise ValueError("❌ DATABASE_URL environment variable is not set.")
 
-USER_ID = 4
+USER_ID = 2
 
 polygon_features = []
 centroid_features = []
