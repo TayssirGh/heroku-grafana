@@ -2,7 +2,7 @@ FROM grafana/grafana
 
 USER root
 
-RUN apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
+RUN apk update && apk add --no-cache nginx
 
 COPY start-grafana.sh /start-grafana.sh
 COPY geojson/ /usr/share/grafana/public/maps/
