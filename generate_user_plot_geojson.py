@@ -4,10 +4,9 @@ import json
 from shapely import wkb
 from shapely.geometry import mapping
 
-# DATABASE_URL = os.getenv("DATABASE_URL")
-# if not DATABASE_URL:
-#     raise ValueError("❌ DATABASE_URL environment variable is not set.")
-DATABASE_URL = "postgres://u3pui32n86ui9h:p25e721db0374518a903321139d105e27c2a66ebbfe39ecd0a4e8c964166a60a3@c2sbm44gu4v1s2.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d4t9nlo26pgdka"
+DATABASE_URL = os.getenv("DATABASE_URL")
+if not DATABASE_URL:
+    raise ValueError("❌ DATABASE_URL environment variable is not set.")
 USER_ID = 2
 
 polygon_features = []
